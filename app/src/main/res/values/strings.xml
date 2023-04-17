@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GymBuddy</string>
+    <string name="exercise_main">Exercises</string>
+    <string name="equipment_main">Equipment</string>
+    <string name="workout_main">Workouts</string>
+    <string name="search_hint">Search</string>
 </resources>
