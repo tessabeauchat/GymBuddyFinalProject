@@ -29,15 +29,14 @@
         tools:layout_editor_absoluteY="40dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Enter an eqipment to search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="hint" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <!--    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/equipment_recycler_view"
         android:layout_width="409dp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="364dp" />
+        tools:layout_editor_absoluteY="364dp" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
