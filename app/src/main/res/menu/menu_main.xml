@@ -11,5 +11,9 @@
     <item
         android:id="@+id/workouts_menu"
         android:title="@string/workout_main" />
-    <item android:title="menu_item" />
+    <item
+        android:id="@+id/info_menu"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="info"
+        app:showAsAction="always" />
 </menu>
