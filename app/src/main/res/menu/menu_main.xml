@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/exercise_menu"
+        android:title="@string/exercise_main" />
+    <item
+        android:id="@+id/equipment_menu"
+        android:title="@string/equipment_main" />
+    <item
+        android:id="@+id/workouts_menu"
+        android:title="@string/workout_main" />
+    <item
+        android:id="@+id/info_menu"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="info"
+        app:showAsAction="always" />
+</menu>

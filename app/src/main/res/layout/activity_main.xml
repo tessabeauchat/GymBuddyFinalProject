@@ -6,13 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageButton
+        android:id="@+id/button_equipment_main"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/equipment_main"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/button_exercise_main"
+        app:layout_constraintEnd_toStartOf="@+id/button_exercise_main"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_exercise_main"
+        app:layout_constraintVertical_bias="1.0"
+        tools:srcCompat="@drawable/equipmentdemobtn" />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginBottom="200dp"
+        android:contentDescription="@string/workout_main"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_exercise_main"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/button_equipment_main"
+        app:layout_constraintTop_toBottomOf="@+id/button_exercise_main"
+        app:layout_constraintVertical_bias="0.429"
+        tools:srcCompat="@drawable/guidedworkoutbtn" />
+
+    <ImageButton
+        android:id="@+id/button_exercise_main"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="92dp"
+        android:contentDescription="@string/exercise_main"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_equipment_main"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        tools:srcCompat="@drawable/exercisedemobtn" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_hint"
+            android:textColorHint="#616161" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
