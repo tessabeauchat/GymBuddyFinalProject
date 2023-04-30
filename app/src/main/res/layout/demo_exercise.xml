@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9CE50000">
+
+    <TextView
+        android:id="@+id/exercise_preview_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Dumbell Tricep Extension"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/dumbell_tricep_extension"
+        app:layout_constraintBottom_toTopOf="@+id/exercise_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/exercise_description"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Hold dumbell in one hand overhead, slowly lower dumbell behind head bending at the elbow, extend upward"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="348dp" />
+
+    <ScrollView
+        android:layout_width="421dp"
+        android:layout_height="289dp"
+        android:background="@color/slate_grey"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="470dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="30dp">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="402dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:shadowColor="#1F2929"
+                android:text="Arnold Press - Arms"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/off_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="402dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:shadowColor="#1F2929"
+                android:text="Side Plank - Core"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/off_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="402dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="44dp"
+                android:gravity="center"
+                android:shadowColor="#1F2929"
+                android:text="Goblet Squat - Legs"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/off_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="402dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="88dp"
+                android:gravity="center"
+                android:shadowColor="#1F2929"
+                android:text="Bench Press - Arms"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/off_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="402dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="136dp"
+                android:gravity="center"
+                android:shadowColor="#1F2929"
+                android:text="Tricep Dip - Arms"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/off_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="402dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="180dp"
+                android:gravity="center"
+                android:shadowColor="#1F2929"
+                android:text="Tricep Kickback - Arms"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/off_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="410dp"
+        android:layout_height="36dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exercise 3/10"
+        tools:layout_editor_absoluteX="324dp"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="100dp"
+        android:layout_height="36dp"
+        android:text="Up Next"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="448dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

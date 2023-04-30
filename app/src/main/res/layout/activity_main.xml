@@ -60,7 +60,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/search_hint"
+            android:hint="Search an Exercise or Equipment"
             android:textColorHint="#616161" />
     </com.google.android.material.textfield.TextInputLayout>
 
