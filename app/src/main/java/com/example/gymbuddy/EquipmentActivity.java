@@ -46,4 +46,6 @@ public class EquipmentActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }
