@@ -30,15 +30,15 @@ final class ExerciseData {
         this.exerciseID = exerciseID;
         this.previewID = previewID;
     }
-    public static int getExercisePreview() {return previewID;}
+    public int getExercisePreview() {return previewID;}
 
-    public static int getExerciseID() {return exerciseID;}
+    public int getExerciseID() {return exerciseID;}
 
-    public static String getExerciseName() {return exerciseName;}
+    public String getExerciseName() {return exerciseName;}
 
-    public static String getExerciseDescription() {return exerciseDescription;}
+    public String getExerciseDescription() {return exerciseDescription;}
 
-    public static String getExerciseMuscleGroup() {return exerciseMuscleGroup;}
+    public String getExerciseMuscleGroup() {return exerciseMuscleGroup;}
 }
 
 public class ExerciseActivity extends AppCompatActivity {
@@ -75,7 +75,7 @@ public class ExerciseActivity extends AppCompatActivity {
         view = findViewById(R.id.exerciseDescription);
         view.setText(exerciseData.getExerciseDescription());
 
-        view = findViewById(R.id.exercicseMuscleGroup;
+        view = findViewById(R.id.exercicseMuscleGroup);
         view.setText(exerciseData.getExerciseMuscleGroup());
     }
 
