@@ -31,7 +31,7 @@ public class ExerciseListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise_list);
 
-        mRecyclerView = findViewById(R.id.exercises_recycler_view);
+        mRecyclerView = findViewById(R.id.recycler_view_exercise);
         mAdapter = new ExerciseListAdapter(this, EXERCISE_DATA);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
