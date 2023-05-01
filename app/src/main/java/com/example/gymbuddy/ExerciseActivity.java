@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.imageview.ShapeableImageView;
 
 import pl.droidsonroids.gif.GifImageView;
 
@@ -60,6 +59,10 @@ public class ExerciseActivity extends AppCompatActivity {
                     "Legs", 1828, R.drawable.upright_row)
     };
     private static int index = 0;
+
+    private void updateExercise(ExerciseData exerciseData){
+        showExercise(exerciseData);
+    }
 
     private void showExercise(ExerciseData exerciseData) {
         GifImageView exerciseGif = findViewById(R.id.exercisePreview);
