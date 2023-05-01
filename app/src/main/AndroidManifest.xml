@@ -25,6 +25,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity android:name=".EquipmentActivity"></activity>
+        <activity android:name=".WorkoutActivity"></activity>
+        <activity android:name=".ExerciseActivity"></activity>
+        <activity android:name=".InfoActivity"></activity>
+        <activity android:name=".ExerciseListActivity"></activity>
     </application>
 
 </manifest>

@@ -3,10 +3,14 @@ package com.example.gymbuddy;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "GYM_BUDDY";
@@ -14,6 +18,39 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        configureToExerciseButton();
+        configureToEquipmentButton();
+        configureToWorkoutButton();
+    }
+    private void configureToExerciseButton(){
+        ImageButton toExercise = (ImageButton) findViewById(R.id.button_exercise_main);
+        toExercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent (MainActivity.this, ExerciseActivity.class));
+                Log.d(TAG, "Exercise main button clicked!");
+            }
+        });
+    }
+    private void configureToEquipmentButton(){
+        ImageButton toExercise = (ImageButton) findViewById(R.id.button_equipment_main);
+        toExercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent (MainActivity.this, EquipmentActivity.class));
+                Log.d(TAG, "Equipment main button clicked!");
+            }
+        });
+    }
+    private void configureToWorkoutButton(){
+        ImageButton toExercise = (ImageButton) findViewById(R.id.button_workout_main);
+        toExercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent (MainActivity.this, WorkoutActivity.class));
+                Log.d(TAG, "Workout main button clicked!");
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

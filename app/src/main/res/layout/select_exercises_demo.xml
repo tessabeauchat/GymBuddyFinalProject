@@ -10,8 +10,7 @@
         android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@tools:sample/avatars"
-        app:srcCompat="@drawable/gym_buddy__150___150_px___16___9_in_"
+        app:srcCompat="@drawable/guidedworkoutheader"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-237dp" />
 
@@ -37,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="314dp"
+        tools:layout_editor_absoluteY="314dp"/>
 
     <!--adding a radio button -->
 
@@ -144,5 +143,5 @@
         android:layout_height="wrap_content"
         android:text="Start Workout"
         tools:layout_editor_absoluteX="242dp"
-        tools:layout_editor_absoluteY="667dp" />/>
+        tools:layout_editor_absoluteY="667dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
