@@ -33,7 +33,7 @@ public class ExerciseListAdapter extends
     public void onBindViewHolder(@NonNull ExerciseListAdapter.ExerciseViewHolder holder, int position) {
         ExerciseData exercise = mExerciseList[position];
         holder.exerciseNameView.setText((exercise.getExerciseName()));
-        holder.exerciseImageView.setImageResource(exercise.getExercisePreview());
+        holder.exerciseImageView.setImageResource(exercise.getExerciseImage());
         holder.exerciseDescView.setText(exercise.getExerciseName());
         holder.exerciseMuscleView.setText(exercise.getExerciseMuscleGroup());
         holder.exerciseIDView.setText(exercise.getExerciseID());

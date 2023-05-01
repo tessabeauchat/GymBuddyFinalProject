@@ -19,7 +19,7 @@ final class ExerciseData {
     final private String exerciseDescription;
     final private String exerciseMuscleGroup;
     final private int exerciseID;
-    final private int previewID;
+    final private int imageID;
 
 
     public ExerciseData(String exerciseName, String exerciseDescription, String exerciseMuscleGroup, int exerciseID, int previewID) {
@@ -27,9 +27,9 @@ final class ExerciseData {
         this.exerciseDescription = exerciseDescription;
         this.exerciseMuscleGroup = exerciseMuscleGroup;
         this.exerciseID = exerciseID;
-        this.previewID = previewID;
+        this.imageID = previewID;
     }
-    public int getExercisePreview() {return previewID;}
+    public int getExerciseImage() {return imageID;}
 
     public int getExerciseID() {return exerciseID;}
 
@@ -66,7 +66,7 @@ public class ExerciseActivity extends AppCompatActivity {
 
     private void showExercise(ExerciseData exerciseData) {
         GifImageView exerciseGif = findViewById(R.id.exercisePreview);
-        exerciseGif.setImageResource(exerciseData.getExercisePreview());
+        exerciseGif.setImageResource(exerciseData.getExerciseImage());
 
         TextView view;
         view = findViewById(R.id.exerciseName);
