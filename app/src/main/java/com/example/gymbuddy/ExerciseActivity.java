@@ -130,9 +130,9 @@ public class ExerciseActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int menuId = item.getItemId();
 
-        if (menuId == R.id.info_menu) {
-            Intent infoIntent = new Intent(this, InfoActivity.class);
-            startActivity(infoIntent);
+        if (menuId == R.id.home_menu) {
+            Intent mainIntent = new Intent(this, MainActivity.class);
+            startActivity(mainIntent);
             return true;
         } else if (menuId == R.id.exercise_menu) {
             Log.d(TAG, "Exercise menu clicked!");
