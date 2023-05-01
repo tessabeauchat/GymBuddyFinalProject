@@ -7,8 +7,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.imageview.ShapeableImageView;
+
+import pl.droidsonroids.gif.GifImageView;
 
 final class ExerciseData {
     final private String exerciseName;
@@ -25,15 +30,15 @@ final class ExerciseData {
         this.exerciseID = exerciseID;
         this.previewID = previewID;
     }
-    public int getExercisePreview() {return previewID;}
+    public static int getExercisePreview() {return previewID;}
 
-    public int getExerciseID() {return exerciseID;}
+    public static int getExerciseID() {return exerciseID;}
 
-    public String getExerciseName() {return exerciseName;}
+    public static String getExerciseName() {return exerciseName;}
 
-    public String getExerciseDescription() {return exerciseDescription;}
+    public static String getExerciseDescription() {return exerciseDescription;}
 
-    public String getExerciseMuscleGroup() {return exerciseMuscleGroup;}
+    public static String getExerciseMuscleGroup() {return exerciseMuscleGroup;}
 }
 
 public class ExerciseActivity extends AppCompatActivity {
@@ -54,6 +59,25 @@ public class ExerciseActivity extends AppCompatActivity {
                     "Using a barbell, place hand 6 inches apart using overhand grip, bring barbell from waist height to chest bending at elbows.",
                     "Legs", 1828, R.drawable.upright_row)
     };
+    private static int index = 0;
+
+    private void showExercise(ExerciseData exerciseData) {
+        GifImageView exerciseGif = findViewById(R.id.exercisePreview);
+        exerciseGif.setImageResource(exerciseData.getExercisePreview());
+
+        TextView view;
+        view = findViewById(R.id.exerciseName);
+        view.setText(exerciseData.getExerciseName());
+
+        view = findViewById(R.id.exerciseID);
+        view.setText(exerciseData.getExerciseID());
+
+        view = findViewById(R.id.exerciseDescription);
+        view.setText(exerciseData.getExerciseDescription());
+
+        view = findViewById(R.id.exercicseMuscleGroup;
+        view.setText(exerciseData.getExerciseMuscleGroup());
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

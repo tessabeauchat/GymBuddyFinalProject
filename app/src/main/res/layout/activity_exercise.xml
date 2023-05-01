@@ -7,14 +7,13 @@
     tools:context=".ExerciseActivity">
 
     <TextView
-        android:id="@+id/exercise_preview_text"
+        android:id="@+id/exerciseName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="11dp"
         android:gravity="center_horizontal"
-        android:text="Current workout"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/gifImageView"
+        app:layout_constraintBottom_toTopOf="@+id/exercicseMuscleGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,13 +21,12 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImageView"
+        android:id="@+id/exercisePreview"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_marginBottom="32dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/dumbell_tricep_extension"
-        app:layout_constraintBottom_toTopOf="@+id/exercise_description"
+        app:layout_constraintBottom_toTopOf="@+id/exerciseDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
@@ -58,13 +56,30 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/exercise_description"
+        android:id="@+id/exerciseDescription"
         android:layout_width="330dp"
         android:layout_height="20dp"
         android:gravity="center_horizontal"
-        android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintBottom_toTopOf="@+id/exercises_recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/exercicseMuscleGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/exercisePreview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/exerciseID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/exerciseDescription"
+        app:layout_constraintStart_toStartOf="@+id/exercisePreview"
+        app:layout_constraintTop_toBottomOf="@+id/exercisePreview" />
 </androidx.constraintlayout.widget.ConstraintLayout>
