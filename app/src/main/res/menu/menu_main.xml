@@ -3,9 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:icon="@drawable/home_button"
-        android:title="home_button"
-        app:showAsAction="always" />
+        android:id="@+id/home_menu"
+        android:title="Home" />
     <item
         android:id="@+id/exercise_menu"
         android:title="@string/exercise_main" />
