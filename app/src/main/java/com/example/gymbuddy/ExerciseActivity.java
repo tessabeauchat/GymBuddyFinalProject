@@ -22,12 +22,12 @@ final class ExerciseData {
     final private int imageID;
 
 
-    public ExerciseData(String exerciseName, String exerciseDescription, String exerciseMuscleGroup, int exerciseID, int previewID) {
+    public ExerciseData(String exerciseName, String exerciseDescription, String exerciseMuscleGroup, int exerciseID, int imageID) {
         this.exerciseName = exerciseName;
         this.exerciseDescription = exerciseDescription;
         this.exerciseMuscleGroup = exerciseMuscleGroup;
         this.exerciseID = exerciseID;
-        this.imageID = previewID;
+        this.imageID = imageID;
     }
     public int getExerciseImage() {return imageID;}
 
@@ -96,9 +96,9 @@ public class ExerciseActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int menuId = item.getItemId();
 
-        if (menuId == R.id.info_menu) {
-            Intent infoIntent = new Intent(this, InfoActivity.class);
-            startActivity(infoIntent);
+        if (menuId == R.id.home_menu) {
+            Intent mainIntent = new Intent(this, MainActivity.class);
+            startActivity(mainIntent);
             return true;
         } else if (menuId == R.id.exercise_menu) {
             Log.d(TAG, "Exercise menu clicked!");
