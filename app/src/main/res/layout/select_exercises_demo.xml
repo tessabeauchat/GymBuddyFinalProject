@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/guidedworkoutheader"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-237dp" />
+        tools:layout_editor_absoluteY="-214dp" />
 
     <TextView
         android:id="@+id/textView"

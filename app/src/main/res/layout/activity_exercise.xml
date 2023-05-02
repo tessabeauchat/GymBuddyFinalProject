@@ -10,7 +10,7 @@
         android:id="@+id/exerciseName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="11dp"
+        android:layout_marginBottom="2dp"
         android:gravity="center_horizontal"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/exercicseMuscleGroup"
@@ -24,8 +24,9 @@
         android:id="@+id/exercisePreview"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="12dp"
         android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@+id/exercicseMuscleGroup"
         app:layout_constraintBottom_toTopOf="@+id/exerciseDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -35,17 +36,19 @@
         android:id="@+id/textInputLayout2"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
+        app:endIconDrawable="@drawable/ic_baseline_search_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:endIconDrawable="@drawable/ic_baseline_search_24">
+        app:layout_constraintTop_toTopOf="parent">
 
         <EditText
             android:id="@+id/exercise_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/search_hint"
-            android:textColorHint="#616161" />
+            android:textColorHint="#616161"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
         <Button
             android:id="@+id/submit_search_button"
             android:layout_width="match_parent"
@@ -53,7 +56,9 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
-            android:text="Search" />
+            android:text="Search"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -69,20 +74,24 @@
         android:id="@+id/exerciseDescription"
         android:layout_width="330dp"
         android:layout_height="20dp"
+        android:layout_marginTop="6dp"
         android:gravity="center_horizontal"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintBottom_toTopOf="@+id/exercises_recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exercisePreview" />
 
     <TextView
         android:id="@+id/exercicseMuscleGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="3dp"
         app:layout_constraintBottom_toTopOf="@+id/exercisePreview"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseName" />
 
     <TextView
         android:id="@+id/exerciseID"
