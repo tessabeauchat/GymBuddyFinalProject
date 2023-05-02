@@ -42,21 +42,18 @@ final class EquipmentData {
 }
 public class EquipmentActivity extends AppCompatActivity {
         private final EquipmentData[] EQUIPMENT_DATA = {
-                new EquipmentData("Dumbbell Tricep Extension",
-                        "Hold dumbbell in one hand overhead, slowly lower dumbbell behind head bending at the elbow, extend upward.",
-                        "Arms", 1824, R.drawable.dumbell_tricep_extension),
-                new EquipmentData("Box Jump",
-                        "Stand square to box, bend at the knee, jump onto box landing on full foot.",
-                        "Legs", 1825, R.drawable.boxjump),
-                new EquipmentData("Kneeling Leg Curl",
+                new EquipmentData("Dumbbell",
+                        "Handled weight used for various exercises.",
+                        "Arms, Legs, Chest, and Back", 1724, R.drawable.dumbell_tricep_extension),
+                new EquipmentData("Box",
+                        "Solid, elevated box used to jump up onto.",
+                        "Legs", 1725, R.drawable.boxjump),
+                new EquipmentData("Leg Curl Machine",
                         "Situate yourself in machine, put one leg at calf under pad, bend leg upward at knee.",
-                        "Legs", 1826, R.drawable.kneeling_leg_curl),
-                new EquipmentData("Side Plank",
-                        "Stack legs on top of one another and plant one forearm on the ground, dip at hip returning to side plank position.",
-                        "Legs", 1827, R.drawable.side_plank),
-                new EquipmentData("Upright Row",
-                        "Using a barbell, place hand 6 inches apart using overhand grip, bring barbell from waist height to chest bending at elbows.",
-                        "Legs", 1828, R.drawable.upright_row)
+                        "Legs", 1726, R.drawable.kneeling_leg_curl),
+                new EquipmentData("Barbell",
+                        "Bar with weights on either side used for various exercises",
+                        "Arms, Legs, Chest and Back", 1728, R.drawable.upright_row)
         };
         private static int index = 0;
         EditText userEquipmentSearch;
@@ -127,8 +124,6 @@ public class EquipmentActivity extends AppCompatActivity {
     }
     });
 }
-
-
 private void closeKeyboard(){
         //https://www.geeksforgeeks.org/how-to-programmatically-hide-android-soft-keyboard/
         View view = this.getCurrentFocus();
