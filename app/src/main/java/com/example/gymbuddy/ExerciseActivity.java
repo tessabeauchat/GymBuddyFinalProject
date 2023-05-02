@@ -44,8 +44,8 @@ final class ExerciseData {
 
 public class ExerciseActivity extends AppCompatActivity {
     private final ExerciseData[] EXERCISE_DATA = {
-            new ExerciseData("Dumbell Tricep Extension",
-                    "Hold dumbell in one hand overhead, slowly lower dumbell behind head bending at the elbow, extend upward.",
+            new ExerciseData("Dumbbell Tricep Extension",
+                    "Hold dumbbell in one hand overhead, slowly lower dumbbell behind head bending at the elbow, extend upward.",
                     "Arms", 1824, R.drawable.dumbell_tricep_extension),
             new ExerciseData("Box Jump",
                     "Stand square to box, bend at the knee, jump onto box landing on full foot.",
@@ -64,22 +64,30 @@ public class ExerciseActivity extends AppCompatActivity {
     EditText userExerciseSearch;
 
     private void updateExercise(String exerciseName) {
-        Boolean isDone = false;
-        while(isDone != true){
+        Boolean found = false;
             for(ExerciseData exercise: EXERCISE_DATA){
                 if(exercise.getExerciseName().equals(exerciseName)){
                     showExercise(exercise);
                     Log.d(TAG, "Matching Worked");
-                    isDone = true;
+                    found = true;
+                    break;
                 }
-                else{
-                    isDone = false;
-                }
-            }
         }
-        if(isDone = false){
+        if(!found){
             TextView textView = (TextView) findViewById(R.id.exerciseName);
             textView.setText("Exercise not found, please try another search!");
+
+            GifImageView exerciseGif = findViewById(R.id.exercisePreview);
+            exerciseGif.setImageResource(0);
+
+            TextView viewID = findViewById(R.id.exerciseID);
+            viewID.setText(null);
+
+            TextView viewDescription = findViewById(R.id.exerciseDescription);
+            viewDescription.setText(null);
+
+            TextView viewMuscleGroup = findViewById(R.id.exercicseMuscleGroup);
+            viewMuscleGroup.setText(null);
         }
     }
 
@@ -93,7 +101,9 @@ public class ExerciseActivity extends AppCompatActivity {
             viewName.setText(exerciseData.getExerciseName());
 
             TextView viewID = findViewById(R.id.exerciseID);
-            viewID.setText(exerciseData.getExerciseID());
+            Object stringID = exerciseData.getExerciseID();
+            stringID = stringID.toString();
+            viewID.setText((CharSequence) stringID);
 
             TextView viewDescription = findViewById(R.id.exerciseDescription);
             viewDescription.setText(exerciseData.getExerciseDescription());
