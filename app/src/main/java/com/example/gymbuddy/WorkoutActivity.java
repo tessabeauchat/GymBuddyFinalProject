@@ -7,14 +7,25 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class WorkoutActivity extends AppCompatActivity {
+public class WorkoutActivity extends AppCompatActivity implements View.OnClickListener {
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout);
+
+        Button lastExerciseButton = findViewById(R.id.last_exercise_button);
+        lastExerciseButton.setOnClickListener(this);
+
+        Button nextExerciseButton = findViewById(R.id.next_exercise_button);
+        nextExerciseButton.setOnClickListener(this);
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -45,5 +56,10 @@ public class WorkoutActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }
