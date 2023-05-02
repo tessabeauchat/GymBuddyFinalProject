@@ -24,7 +24,8 @@ public class ExerciseListAdapter extends
     }
     @NonNull
     @Override
-    public ExerciseListAdapter.ExerciseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ExerciseListAdapter.ExerciseViewHolder
+    onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View mItemView = mInflater.inflate(R.layout.exercise_list_item, parent, false);
         return new ExerciseViewHolder(mItemView, this);
     }
@@ -32,7 +33,7 @@ public class ExerciseListAdapter extends
     @Override
     public void onBindViewHolder(@NonNull ExerciseListAdapter.ExerciseViewHolder holder, int position) {
         ExerciseData exercise = mExerciseList[position];
-        holder.exerciseNameView.setText((exercise.getExerciseName()));
+        holder.exerciseNameView.setText(exercise.getExerciseName());
         holder.exerciseImageView.setImageResource(exercise.getExerciseImage());
         holder.exerciseDescView.setText(exercise.getExerciseName());
         holder.exerciseMuscleView.setText(exercise.getExerciseMuscleGroup());

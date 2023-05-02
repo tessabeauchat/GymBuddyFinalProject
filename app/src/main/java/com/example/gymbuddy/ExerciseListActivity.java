@@ -29,9 +29,9 @@ public class ExerciseListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exercise_list);
+        setContentView(R.layout.activity_exercise);
 
-        mRecyclerView = findViewById(R.id.recycler_view_exercise);
+        mRecyclerView = findViewById(R.id.exercises_recycler_view);
         mAdapter = new ExerciseListAdapter(this, EXERCISE_DATA);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));

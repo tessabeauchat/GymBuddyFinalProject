@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +21,7 @@ final class ExerciseData {
     final private String exerciseDescription;
     final private String exerciseMuscleGroup;
     final private int exerciseID;
-    final private int imageID;
+    final private int imageID ;
 
 
     public ExerciseData(String exerciseName, String exerciseDescription, String exerciseMuscleGroup, int exerciseID, int imageID) {
@@ -59,39 +61,71 @@ public class ExerciseActivity extends AppCompatActivity {
                     "Legs", 1828, R.drawable.upright_row)
     };
     private static int index = 0;
+    EditText userExerciseSearch;
 
-    private void updateExercise(ExerciseData exerciseData){
-        showExercise(exerciseData);
+    private void updateExercise(String exerciseName) {
+        Boolean isDone = false;
+        while(isDone != true){
+            for(ExerciseData exercise: EXERCISE_DATA){
+                if(exercise.getExerciseName().equals(exerciseName)){
+                    showExercise(exercise);
+                    Log.d(TAG, "Matching Worked");
+                    isDone = true;
+                }
+                else{
+                    isDone = false;
+                }
+            }
+        }
+        if(isDone = false){
+            TextView textView = (TextView) findViewById(R.id.exerciseName);
+            textView.setText("Exercise not found, please try another search!");
+        }
     }
 
     private void showExercise(ExerciseData exerciseData) {
-        GifImageView exerciseGif = findViewById(R.id.exercisePreview);
-        exerciseGif.setImageResource(exerciseData.getExerciseImage());
+            Log.d(TAG, "This should be displaying");
+            Log.d(TAG, "Data to be displayed: " +exerciseData.toString());
+            GifImageView exerciseGif = findViewById(R.id.exercisePreview);
+            exerciseGif.setImageResource(exerciseData.getExerciseImage());
 
-        TextView view;
-        view = findViewById(R.id.exerciseName);
-        view.setText(exerciseData.getExerciseName());
+            TextView viewName = findViewById(R.id.exerciseName);
+            viewName.setText(exerciseData.getExerciseName());
 
-        view = findViewById(R.id.exerciseID);
-        view.setText(exerciseData.getExerciseID());
+            TextView viewID = findViewById(R.id.exerciseID);
+            viewID.setText(exerciseData.getExerciseID());
 
-        view = findViewById(R.id.exerciseDescription);
-        view.setText(exerciseData.getExerciseDescription());
+            TextView viewDescription = findViewById(R.id.exerciseDescription);
+            viewDescription.setText(exerciseData.getExerciseDescription());
 
-        view = findViewById(R.id.exercicseMuscleGroup);
-        view.setText(exerciseData.getExerciseMuscleGroup());
+            TextView viewMuscleGroup = findViewById(R.id.exercicseMuscleGroup);
+            viewMuscleGroup.setText(exerciseData.getExerciseMuscleGroup());
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
+        userExerciseSearch = (EditText) findViewById(R.id.exercise_search);
+        View searchSubmitButton = findViewById(R.id.submit_search_button);
+
+        searchSubmitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String userSearch = userExerciseSearch.getText().toString();
+                Log.d(TAG, "Search Performed");
+                Log.d(TAG, userSearch);
+                updateExercise(userSearch);
+            }
+        });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int menuId = item.getItemId();
