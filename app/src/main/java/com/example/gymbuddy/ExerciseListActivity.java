@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class ExerciseListActivity extends AppCompatActivity {
-    private final ExerciseData[] EXERCISE_DATA = {
+    public final ExerciseData[] EXERCISE_DATA = {
             new ExerciseData("Dumbell Tricep Extension",
                     "Hold dumbell in one hand overhead, slowly lower dumbell behind head bending at the elbow, extend upward.",
                     "Arms", 1824, R.drawable.dumbell_tricep_extension),

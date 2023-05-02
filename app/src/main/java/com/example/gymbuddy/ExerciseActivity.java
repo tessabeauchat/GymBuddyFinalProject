@@ -2,12 +2,14 @@ package com.example.gymbuddy;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -126,10 +128,30 @@ public class ExerciseActivity extends AppCompatActivity {
                 Log.d(TAG, "Search Performed");
                 Log.d(TAG, userSearch);
                 updateExercise(userSearch);
+                closeKeyboard();
+                userExerciseSearch.setText("");
             }
         });
     }
+    private void closeKeyboard(){
+        //https://www.geeksforgeeks.org/how-to-programmatically-hide-android-soft-keyboard/
+        View view = this.getCurrentFocus();
+        if (view != null) {
 
+            // now assign the system
+            // service to InputMethodManager
+            InputMethodManager manager
+                    = null;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+                manager = (InputMethodManager)
+                getSystemService(
+                        Context.INPUT_METHOD_SERVICE);
+            }
+            manager
+                    .hideSoftInputFromWindow(
+                            view.getWindowToken(), 0);
+        }
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
