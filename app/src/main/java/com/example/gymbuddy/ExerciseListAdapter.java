@@ -73,9 +73,9 @@ public class ExerciseListAdapter extends
             // Get the position of the item that was clicked.
             int mPosition = getLayoutPosition();
             // Use that to access the affected item in mWordList.
-            String campus = mExerciseList[mPosition].getExerciseName();
+            String exercise = mExerciseList[mPosition].getExerciseName();
             Snackbar.make(exerciseNameView,
-                    campus + " clicked!",
+                    exercise + " clicked!",
                     Snackbar.LENGTH_SHORT).show();
 
         }
