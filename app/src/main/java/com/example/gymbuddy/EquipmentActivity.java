@@ -2,6 +2,7 @@ package com.example.gymbuddy;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -112,7 +113,9 @@ public class EquipmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_equipment);
-    }
+        userEquipmentSearch = (EditText) findViewById(R.id.equipment_search);
+        View searchSubmitButton = findViewById(R.id.submit_search_button);
+        searchSubmitButton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
         String userSearch = userEquipmentSearch.getText().toString();
@@ -122,6 +125,8 @@ public class EquipmentActivity extends AppCompatActivity {
         closeKeyboard();
         userEquipmentSearch.setText("");
     }
+    });
+}
 
 
 private void closeKeyboard(){
